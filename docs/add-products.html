@@ -1,0 +1,574 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Add products · Jayway Vue.js workshop</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="update-products.html" />
+    
+    
+    <link rel="prev" href="list-products.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="environment.html">
+            
+                <a href="environment.html">
+            
+                    
+                    Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="sample-code.html">
+            
+                <a href="sample-code.html">
+            
+                    
+                    Get the sample code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="hello-world.html">
+            
+                <a href="hello-world.html">
+            
+                    
+                    Creating your first Vue.js project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="vue-cli.html">
+            
+                <a href="vue-cli.html">
+            
+                    
+                    Using vue-cli for quick project scaffolding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="list-products.html">
+            
+                <a href="list-products.html">
+            
+                    
+                    List products
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="add-products.html">
+            
+                <a href="add-products.html">
+            
+                    
+                    Add products
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="update-products.html">
+            
+                <a href="update-products.html">
+            
+                    
+                    Update products
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="remove-products.html">
+            
+                <a href="remove-products.html">
+            
+                    
+                    Remove products
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    Routing with vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="unidirectional-flow.html">
+            
+                <a href="unidirectional-flow.html">
+            
+                    
+                    Refactor to a unidirectional flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="async-api.html">
+            
+                <a href="async-api.html">
+            
+                    
+                    Communicating with an API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="congratulations.html">
+            
+                <a href="congratulations.html">
+            
+                    
+                    Congratulations!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Add products</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="add-products">Add products</h1><p>Let&apos;s create some products. Since we are going to use the same form for saving and updating products lets name it <code>SaveProductForm</code>.</p><p>From the command-line in the <code>exercise-files/create-products/</code> folder</p><pre><code class="lang-bash"><span class="token function">touch</span> src/components/SaveProductForm.vue</code></pre>
+<p>Then start off with the template</p><pre><code class="lang-html"><span class="token comment" spellcheck="true">&lt;!-- src/components/SaveProductForm.vue  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>productName<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Product name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>product.name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>productName<span class="token punctuation">&quot;</span></span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>32<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Enter product name<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>productDescription<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Product description <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text-muted<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>(optional)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>product.description<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>productDescription<span class="token punctuation">&quot;</span></span> <span class="token attr-name">rows</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>128<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Enter description<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>price<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Price<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>number<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>product.price<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>price<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Enter Price<span class="token punctuation">&quot;</span></span> <span class="token attr-name">number</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>submit<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">v-on:</span>click.prevent</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>onSubmit<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>btn btn-primary<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Save product<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>It&apos;s just a very basic form with three text inputs and a save button. We are using two-way data binding between our product object and our text inputs so that our object is updated automatically as we type. This is accomplished via the <a href="https://vuejs.org/guide/forms.html" target="_blank"><code>v-model</code></a> directive.</p><p>On the actual save button we are using the <a href="https://vuejs.org/guide/events.html" target="_blank"><code>v-on</code></a> directive to bind the <code>onSubmit()</code> method to a click event. We&apos;re also using the <a href="http://vuejs.org/guide/events.html#Event-Modifiers" target="_blank">event modifier</a> <code>.prevent</code> so we don&apos;t have to call <code>event.preventDefault()</code> from the <code>onSubmit()</code> handler to prevent default browser behavior when the button is clicked.</p><p>Before moving on we need to discuss how these two components will communicate with each other. Some possibilities are:</p><ol><li>Let <code>SaveProductForm</code> handle the form state, then use a global event bus with a publish/subscribe model to let the ProductList know when a product has been created.
+</li>
+<li>Move the <code>SaveProductForm</code> component into the <code>ProductList</code> component and let the product list handle the state.
+</li>
+<li>Let the parent component handle the state and pass it as props.
+</li>
+<li>Implement a unidirectional flow and move state out of the components.
+</li></ol>
+<p>I&apos;m sure there are more ways but for now we are going with option 3 and later on we are going to have a look at option 4.</p><p>The actual component is not very complicated.</p><pre><code class="lang-html"><span class="token comment" spellcheck="true">&lt;!-- src/components/SaveProductForm.vue  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  props<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;product&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">onSubmit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">&apos;submit&apos;</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>To be able to pass a property to a component we need to specify what properties that should be allowed otherwise it would just be ignored.
+We are also defining an <code>onSubmit()</code> method that will be called when the save button is clicked. Since we are not actually going to handle the actual creation/update of a product in this component we are just going to emit a <a href="http://vuejs.org/guide/components.html#Custom-Events" target="_blank">custom event</a> that parent components can listen to using the <code>this.$emit()</code> function.</p><p><strong>NOTE!</strong>
+If you really wan&apos;t to make sure that everything is correct Vue.js has something
+called <a href="http://vuejs.org/guide/components.html#Prop-Validation" target="_blank">props validation</a>
+that let&apos;s you validate the properties type. If you have used React I&apos;m sure you know how this works.</p><p>Import and add our new component into the <code>ManageProducts</code> component.</p><pre><code class="lang-html"><span class="token comment" spellcheck="true">&lt;!-- src/components/ManageProducts.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>save-product-form</span>
+      <span class="token attr-name">:product</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>productInForm<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name"><span class="token namespace">v-on:</span>submit</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>onFormSave<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>save-product-form</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>product-list</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>product-list</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+
+<span class="token keyword">import</span> ProductList <span class="token keyword">from</span> <span class="token string">&apos;./ProductList&apos;</span>
+<span class="token keyword">import</span> SaveProductForm <span class="token keyword">from</span> <span class="token string">&apos;./SaveProductForm&apos;</span>
+
+<span class="token keyword">const</span> initialData <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    productInForm<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      id<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      name<span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">,</span>
+      description<span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">,</span>
+      price<span class="token punctuation">:</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span>  
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    ProductList<span class="token punctuation">,</span>
+    SaveProductForm
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  data<span class="token punctuation">:</span> initialData<span class="token punctuation">,</span>
+  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">onFormSave</span><span class="token punctuation">(</span>productData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;productData&apos;</span><span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>productData<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>We introduced a couple of new concepts here. Note the addition of new attributes in the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>save-product-form</span><span class="token punctuation">&gt;</span></span></code> elements. This is how you pass <a href="http://vuejs.org/guide/components.html#Props" target="_blank">props</a> down to a component. Under the methods object we created a method <code>onFormSave()</code> that we bound to the custom <code>submit</code> event that is triggered by our <code>SaveProductForm</code> component.</p><p>By now you should be able to test this out but we are not actually doing anything with the data, except logging it to the console. Before we can actually push our new product to the product list
+we need to refactor the ProductList component to a so called stateless component
+which will also receive it&apos;s data via props.</p><p>In <code>src/components/ProductList</code>:</p><pre><code class="lang-html"><span class="token comment" spellcheck="true">&lt;!-- src/components/ProductList.vue  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  props<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;products&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Move the product data to the ManageProducts component and send it down as props
+to the ProductList.</p><pre><code class="lang-html"><span class="token comment" spellcheck="true">&lt;!-- src/components/ManageProducts.vue  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">&gt;</span></span>
+    ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>product-list</span>
+      <span class="token attr-name">:products</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>products<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>product-list</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+<span class="token keyword">import</span> ProductList <span class="token keyword">from</span> <span class="token string">&apos;./ProductList&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SaveProductForm <span class="token keyword">from</span> <span class="token string">&apos;./SaveProductForm&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> initialData <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+ <span class="token keyword">return</span> <span class="token punctuation">{</span>
+   productInForm<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   products<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+     <span class="token punctuation">{</span>
+       id<span class="token punctuation">:</span> <span class="token string">&apos;cc919e21-ae5b-5e1f-d023-c40ee669520c&apos;</span><span class="token punctuation">,</span>
+       name<span class="token punctuation">:</span> <span class="token string">&apos;COBOL 101 vintage&apos;</span><span class="token punctuation">,</span>
+       description<span class="token punctuation">:</span> <span class="token string">&apos;Learn COBOL with this vintage programming book&apos;</span><span class="token punctuation">,</span>
+       price<span class="token punctuation">:</span> <span class="token number">399</span><span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token punctuation">{</span>
+       id<span class="token punctuation">:</span> <span class="token string">&apos;bcd755a6-9a19-94e1-0a5d-426c0303454f&apos;</span><span class="token punctuation">,</span>
+       name<span class="token punctuation">:</span> <span class="token string">&apos;Sharp C2719 curved TV&apos;</span><span class="token punctuation">,</span>
+       description<span class="token punctuation">:</span> <span class="token string">&apos;Watch TV like never before with the brand new curved screen technology&apos;</span><span class="token punctuation">,</span>
+       price<span class="token punctuation">:</span> <span class="token number">1995</span><span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token punctuation">{</span>
+       id<span class="token punctuation">:</span> <span class="token string">&apos;727026b7-7f2f-c5a0-ace9-cc227e686b8e&apos;</span><span class="token punctuation">,</span>
+       name<span class="token punctuation">:</span> <span class="token string">&apos;Remmington X mechanical keyboard&apos;</span><span class="token punctuation">,</span>
+       description<span class="token punctuation">:</span> <span class="token string">&apos;Excellent for gaming and typing, this Remmington X keyboard &apos;</span> <span class="token operator">+</span>
+         <span class="token string">&apos;features tactile, clicky switches for speed and accuracy&apos;</span><span class="token punctuation">,</span>
+       price<span class="token punctuation">:</span> <span class="token number">595</span><span class="token punctuation">,</span>
+     <span class="token punctuation">}</span>
+   <span class="token punctuation">]</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    ProductList<span class="token punctuation">,</span>
+    SaveProductForm
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Now that we have access to the product list all we need to do is push our new product object into it.</p><pre><code class="lang-html"><span class="token comment" spellcheck="true">&lt;!-- src/components/ManageProducts.vue  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+<span class="token keyword">import</span> uuid <span class="token keyword">from</span> <span class="token string">&apos;uuid&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">onFormSave</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// Generate an id using the third-party lib &apos;uuid&apos;</span>
+      product<span class="token punctuation">.</span>id <span class="token operator">=</span> uuid<span class="token punctuation">.</span><span class="token function">v4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// add it to the product list</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>products<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// reset the form</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">resetProductInForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">resetProductInForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>productInForm <span class="token operator">=</span> <span class="token function">initialData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>productInForm<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>There you have it. Fire up your browser and test it out!</p><p><img alt="Create product image" src="images/create-product.png"></p><p>Next up we are going to modify our <code>SaveProductForm</code> component so that we can update existing products.</p><hr><p><strong>Key to perfection</strong></p><ul><li>Use <a href="http://vuejs.org/guide/components.html#Prop-Validation" target="_blank">props validation</a> to validate your component properties.
+</li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="list-products.html" class="navigation navigation-prev " aria-label="Previous page: List products">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="update-products.html" class="navigation navigation-next " aria-label="Next page: Update products">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Add products","level":"1.8","depth":1,"next":{"title":"Update products","level":"1.9","depth":1,"path":"docs/update-products.md","ref":"docs/update-products.md","articles":[]},"previous":{"title":"List products","level":"1.7","depth":1,"path":"docs/list-products.md","ref":"docs/list-products.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/jayway/vue-js-workshop"},"prism":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Jayway Vue.js workshop","gitbook":"3.x.x","theme-default":{"showLevel":true}},"file":{"path":"docs/add-products.md","mtime":"2016-10-28T12:23:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-28T12:24:08.568Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

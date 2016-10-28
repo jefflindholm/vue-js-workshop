@@ -1,0 +1,546 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Communicating with an API · Jayway Vue.js workshop</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="congratulations.html" />
+    
+    
+    <link rel="prev" href="unidirectional-flow.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="environment.html">
+            
+                <a href="environment.html">
+            
+                    
+                    Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="sample-code.html">
+            
+                <a href="sample-code.html">
+            
+                    
+                    Get the sample code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="hello-world.html">
+            
+                <a href="hello-world.html">
+            
+                    
+                    Creating your first Vue.js project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="vue-cli.html">
+            
+                <a href="vue-cli.html">
+            
+                    
+                    Using vue-cli for quick project scaffolding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="list-products.html">
+            
+                <a href="list-products.html">
+            
+                    
+                    List products
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="add-products.html">
+            
+                <a href="add-products.html">
+            
+                    
+                    Add products
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="update-products.html">
+            
+                <a href="update-products.html">
+            
+                    
+                    Update products
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="remove-products.html">
+            
+                <a href="remove-products.html">
+            
+                    
+                    Remove products
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    Routing with vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="unidirectional-flow.html">
+            
+                <a href="unidirectional-flow.html">
+            
+                    
+                    Refactor to a unidirectional flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="async-api.html">
+            
+                <a href="async-api.html">
+            
+                    
+                    Communicating with an API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="congratulations.html">
+            
+                <a href="congratulations.html">
+            
+                    
+                    Congratulations!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Communicating with an API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="communicating-with-an-api">Communicating with an API</h1><p>Now that we have refactored our data flow to a unidirectional flow and have all our state nicely defined in our store it&apos;s time to actually persist our data.</p><p>You can find an example implementation of an API in the <code>/api</code> folder with the following endpoints.</p><table>
+<thead>
+<tr><th>HTTP method</th>
+<th>URI path</th>
+<th>Description</th>
+</tr></thead><tbody>
+<tr><td>POST</td>
+<td>/products</td>
+<td>Create a new product</td>
+</tr><tr><td>GET</td>
+<td>/products</td>
+<td>Retrieve all products</td>
+</tr><tr><td>PUT</td>
+<td>/products/:id</td>
+<td>Update a product</td>
+</tr><tr><td>DELETE</td>
+<td>/products/:id</td>
+<td>Delete a product</td>
+</tr></tbody></table>
+
+<p>First of we should start the api application. From the <code>/api</code> folder.</p><pre><code class="lang-bash">npm start</code></pre>
+<p><strong>NOTE!</strong> If you want to reset the products at any time just restart the API server.</p><p>You can make sure it works with a curl request.</p><pre><code class="lang-bash">curl -i http://localhost:3000/products</code></pre>
+<p>Now that we have our API up and running it&apos;s time to connect our Vue app to it.</p><p>We will be using <a href="https://github.com/vuejs/vue-resource" target="_blank">vue-resource</a> to make our API requests. Inside the <code>/exercise-files/async-api/</code> folder install vue-resource.</p><pre><code>npm install --save vue-resource</code></pre>
+<p><strong>NOTE!</strong>
+You don&apos;t have to use vue-resource as it&apos;s only an abstraction over XMLHttpRequest so you can use whichever request library you want like jQuery, axios, whatwg-fetch, etc...</p><p>Add vue-resource as middleware to Vue.</p><pre><code class="lang-javascript"><span class="token comment" spellcheck="true">// src/main.js</span>
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">&apos;vue&apos;</span>
+<span class="token keyword">import</span> VueRouter <span class="token keyword">from</span> <span class="token string">&apos;vue-router&apos;</span>
+<span class="token keyword">import</span> VueResource <span class="token keyword">from</span> <span class="token string">&apos;vue-resource&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueRouter<span class="token punctuation">)</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueResource<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// set the API root so we can use relative url&apos;s in our actions.</span>
+Vue<span class="token punctuation">.</span>http<span class="token punctuation">.</span>options<span class="token punctuation">.</span>root <span class="token operator">=</span> <span class="token string">&apos;http://localhost:3000&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
+<p>We are going to start by fetching products. Implement a fetch products action.</p><pre><code class="lang-javascript"><span class="token comment" spellcheck="true">// src/vuex/modules/products/actions.js</span>
+
+<span class="token comment" spellcheck="true">// import the http module that has been added by vue-resource</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> http <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;vue&apos;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  FETCH_PRODUCTS<span class="token punctuation">,</span>
+  DELETE_PRODUCT<span class="token punctuation">,</span>
+  CREATE_PRODUCT<span class="token punctuation">,</span>
+  UPDATE_PRODUCT
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./mutation-types&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> fetchProducts <span class="token punctuation">(</span><span class="token punctuation">{</span> commit <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;products/&apos;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">commit</span><span class="token punctuation">(</span>FETCH_PRODUCTS<span class="token punctuation">,</span> response<span class="token punctuation">.</span>body<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
+<p>Because we set the API root before we can use relative urls here. This is just a convenience but it&apos;s very useful when running our app against different api&apos;s e.g. when running in development or production.</p><p>When the promise resolves we commit an event to the store with the response data.</p><p>Add a mutation type.</p><pre><code class="lang-javascript"><span class="token comment" spellcheck="true">// src/vuex/modules/products/mutation-types.js</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> FETCH_PRODUCTS <span class="token operator">=</span> <span class="token string">&apos;products/FETCH_PRODUCTS&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
+<p>Create the mutation function. Also change <code>initialState</code> to contain an empty array of products as we will get our products from the API.</p><pre><code class="lang-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span>
+  FETCH_PRODUCTS<span class="token punctuation">,</span>
+  CREATE_PRODUCT<span class="token punctuation">,</span>
+  UPDATE_PRODUCT<span class="token punctuation">,</span>
+  DELETE_PRODUCT
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;../mutation-types&apos;</span>
+
+<span class="token comment" spellcheck="true">// initial state</span>
+<span class="token keyword">const</span> initialState <span class="token operator">=</span> <span class="token punctuation">{</span>
+  all<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// mutations</span>
+<span class="token keyword">const</span> mutations <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span>FETCH_PRODUCTS<span class="token punctuation">]</span> <span class="token punctuation">(</span>state<span class="token punctuation">,</span> products<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// assign the products that we got from our FETCH_PRODUCTS event to state.all</span>
+    state<span class="token punctuation">.</span>all <span class="token operator">=</span> products
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
+<p>Dispatch the <code>fetchProducts</code> action from the app within the created lifecycle method that is called directly after the app instance has been created. We would like to fetch our products as soon as possible so that our site feels fast and responsive.</p><pre><code class="lang-html"><span class="token comment" spellcheck="true">&lt;!-- src/App.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    AppNav
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  created <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">&apos;fetchProducts&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Test it out! <code>npm run dev</code> from the console and go to <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.</p><p>Implement the remaining actions.</p><pre><code class="lang-javascript"><span class="token comment" spellcheck="true">// src/vuex/modules/products/actions.js</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createProduct</span><span class="token punctuation">(</span><span class="token punctuation">{</span> commit <span class="token punctuation">}</span><span class="token punctuation">,</span> product<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> http<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">&apos;products&apos;</span><span class="token punctuation">,</span> product<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">commit</span><span class="token punctuation">(</span>CREATE_PRODUCT<span class="token punctuation">,</span> response<span class="token punctuation">.</span>body<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> updateProduct <span class="token punctuation">(</span><span class="token punctuation">{</span> commit <span class="token punctuation">}</span><span class="token punctuation">,</span> product<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> http<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`products/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>product<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span> product<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">commit</span><span class="token punctuation">(</span>UPDATE_PRODUCT<span class="token punctuation">,</span> response<span class="token punctuation">.</span>body<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> deleteProduct <span class="token punctuation">(</span><span class="token punctuation">{</span> commit <span class="token punctuation">}</span><span class="token punctuation">,</span> productId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> http<span class="token punctuation">.</span><span class="token keyword">delete</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`products/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>productId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">commit</span><span class="token punctuation">(</span>DELETE_PRODUCT<span class="token punctuation">,</span> productId<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">saveProduct</span><span class="token punctuation">(</span><span class="token punctuation">{</span> commit<span class="token punctuation">,</span> state <span class="token punctuation">}</span><span class="token punctuation">,</span> product<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> index <span class="token operator">=</span> state<span class="token punctuation">.</span>all<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> p<span class="token punctuation">.</span>id <span class="token operator">===</span> product<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// update product if it exists or create it if it doesn&apos;t</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">updateProduct</span><span class="token punctuation">(</span><span class="token punctuation">{</span> commit <span class="token punctuation">}</span><span class="token punctuation">,</span> product<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">createProduct</span><span class="token punctuation">(</span><span class="token punctuation">{</span> commit <span class="token punctuation">}</span><span class="token punctuation">,</span> product<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Nothing special is going on here. We extracted the <code>updateProduct()</code> and <code>createProduct()</code> to their own functions and then called them from within <code>saveProduct()</code> function. We also make sure to return the promise to the calling function so that we can attach additional functionality when the promise has resolved, e.g. resetting our form.</p><p>Refactor the <code>ManageProducts</code> component to wait for the promises to resolve.</p><pre><code class="lang-html"><span class="token comment" spellcheck="true">&lt;!-- src/components/ManageProducts.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token function">onFormSave</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">saveProduct</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">resetProductInForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token function">onRemoveClicked</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">deleteProduct</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>product<span class="token punctuation">.</span>id <span class="token operator">===</span> <span class="token keyword">this</span><span class="token punctuation">.</span>productInForm<span class="token punctuation">.</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">resetProductInForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>You should now have a fully working application that is connected to an API.</p><hr><p><strong>Key to perfection</strong></p><ul><li><p>Handle communication failures.</p><p><strong>HINT!</strong> The <a href="https://github.com/acdlite/flux-standard-action" target="_blank">Flux standard actions</a> specification can be used as inspiration on how to pass errors down to the store.</p></li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="unidirectional-flow.html" class="navigation navigation-prev " aria-label="Previous page: Refactor to a unidirectional flow">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="congratulations.html" class="navigation navigation-next " aria-label="Next page: Congratulations!">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Communicating with an API","level":"1.13","depth":1,"next":{"title":"Congratulations!","level":"1.14","depth":1,"path":"docs/congratulations.md","ref":"docs/congratulations.md","articles":[]},"previous":{"title":"Refactor to a unidirectional flow","level":"1.12","depth":1,"path":"docs/unidirectional-flow.md","ref":"docs/unidirectional-flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/jayway/vue-js-workshop"},"prism":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Jayway Vue.js workshop","gitbook":"3.x.x","theme-default":{"showLevel":true}},"file":{"path":"docs/async-api.md","mtime":"2016-10-24T16:31:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-28T12:24:08.568Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
