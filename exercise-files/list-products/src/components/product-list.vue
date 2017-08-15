@@ -6,7 +6,7 @@
       <th>Price</th>
     </thead>
     <tbody>
-      <tr v-for="product in products" track-by="id" @click.prevent="onEdit(product)">
+      <tr v-for="product in products" :key="product.id" track-by="id" @click.prevent="onEdit(product)">
         <td>{{product.name}}</td>
         <td>{{product.description}}</td>
         <td>{{product.price}}:-</td>

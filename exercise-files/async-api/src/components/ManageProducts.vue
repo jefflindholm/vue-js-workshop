@@ -44,10 +44,11 @@ export default {
       'deleteProduct'
     ]),
     onFormSave(product) {
-      this.saveProduct(product);
-
-      this.resetProductInForm();
-    },
+      this.saveProduct(product)
+      .then(() => {
+        this.resetProductInForm();
+      });
+  },
     resetProductInForm() {
       this.productInForm = initialData().productInForm;
     },
@@ -55,11 +56,12 @@ export default {
       this.productInForm = { ...product };
     },
     onRemoveClicked(productId) {
-      this.deleteProduct(productId);
-
-      if (productId === this.productInForm.id) {
-        this.resetProductInForm();
-      }
+      this.deleteProduct(productId)
+      .then(() => {
+        if (productId === this.productInForm.id) {
+          this.resetProductInForm();
+        }
+      })
     }
   }
 }
